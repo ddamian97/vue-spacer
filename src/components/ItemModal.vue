@@ -74,14 +74,23 @@ export default {
       height: auto;
       background-color: black;
       min-width: 50%;
-      margin-right: 20px;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      max-height: 400px;
       @media (max-width: 1024px){
         min-width: unset;
         margin-right: 0;
       }
       img{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         display: block;
       }
     }
@@ -90,6 +99,11 @@ export default {
     }
     .description{
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
   .close{
